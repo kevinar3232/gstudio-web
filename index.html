@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Fantasy 13 Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+        
+        body {
+            font-family: 'Quantico', sans-serif; /* Ganti font sesuai dengan Final Fantasy */
+        }
+
+        .menu-item {
+            display: inline-block;
+            font-size: 24px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: 0% 50%;
+        }
+
+        .menu-item:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-gray-100 to-gray-400 text-white flex items-center justify-center h-screen">
+    <div class="text-center xl:flex flex-row items-center justify-center">
+        <img src="img/213.png" alt="Final Fantasy 13 Logo" class="-mb-7 sm:max-w-sm xl:max-w-4xl">
+        <ul class="menu-list flex flex-col">
+            <li class="menu-item text-gray-700"><a href="gallery.html">Gallery</a></li>
+            <li class="menu-item text-gray-700"><a href="pricelist.html">Price List</a></li>
+            <li class="menu-item text-gray-700"><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    
+
+    <div class="absolute bottom-0 left-0 mb-5 ml-5 flex space-x-4">
+        <a href="https://www.facebook.com/gestudioart/">
+                 <img class="w-8 lg:w-6 about-us transform transition duration-100 hover:scale-125 cursor-pointer" src="img/logo/icons8-facebook-50.png">
+             </a>
+             <a href="https://twitter.com/GSTUDlOAart">
+                 <img class="w-8 lg:w-6 about-us transform transition duration-100 hover:scale-125 cursor-pointer" src="img/logo/icons8-x-50.png">
+             </a>
+             <a href="https://www.instagram.com/gstudioart1/">
+                 <img class="w-8 lg:w-6 about-us transform transition duration-100 hover:scale-125 cursor-pointer" src="img/logo/icons8-instagram-50.png">
+             </a>
+             <a href="https://www.artstation.com/gstudio1">
+                 <img class="w-8 lg:w-6 about-us transform transition duration-100 hover:scale-125 cursor-pointer" src="img/logo/icons8-artstation-50.png">
+             </a>
+             <a href="https://www.deviantart.com/gstudioworks">
+                 <img class="w-8 lg:w-6 about-us transform transition duration-100 hover:scale-125 cursor-pointer" src="img/logo/icons8-deviantart-50.png">
+             </a>
+             <a href="https://www.reddit.com/user/Gstudio1/">
+                 <img class="w-8 lg:w-6 about-us transform transition duration-100 hover:scale-125 cursor-pointer" src="img/logo/icons8-reddit-50.png">
+             </a>
+     </div>
+
+</body>
+</html>
