@@ -4,145 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dissidia 012 Character Select</title>
+    <title>Pricelist Character Design Commission</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-    .character-card {
-            transition: transform 0.3s ease;
-            width: 70px; /* Ukuran tetap dalam piksel */
-            height: 150;
-            position: sticky; /* Menetapkan posisi relatif untuk referensi absolut */
-            overflow: hidden; /* Mengatur overflow menjadi hidden */
-            border: 2px solid ; /* Tambahkan border */
-            border-radius: 8px; /* Tambahkan border radius */
-            box-shadow: 0 2px 4px rgba(136, 118, 118, 0.1); /* Tambahkan shadow */
-            
+        .bg-custom {
+            /* Background Image URL */
+            background-image: url('https://example.com/background-image.jpg');
+            /* Adjust the following properties based on your preference */
+            background-size: cover;
+            background-position: center;
         }
 
-        .character-card:hover {
-            transform: scale(1.05);
-            border-color: #6f6bc7; /* Ubah warna border saat hover */
+        .bg-custom-overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
         }
-
-    
-
-        .character-image {
-            display: none;
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            object-fit: cover; /* Memastikan gambar memenuhi kartu */
-        }
-
-        .character-card:hover .character-image {
-            display: block;
-        }
-
-        /* Additional CSS for clicked image */
-        .clicked-image {
-            max-width: 80vw;
-            max-height: 80vh;
-        }
-
     </style>
 </head>
 
-<body class="bg-gray-200 p-8">
-    <div class="container mx-auto">
-
-        <div class="flex items-center">
-            <!-- Tambahkan ikon dari Icons8 tanpa teks atau latar belakang -->
-            <a href="index.html" class="flex items-center">
-                <img src="https://img.icons8.com/fluent-systems-filled/24/000000/back.png" class="mr-2" alt="Back Icon">
-            </a>
-        </div>
-
-        <h1 class="text-3xl font-semibold text-center mb-5 -mt-4">Gallery</h1>
-        <div class="grid grid-cols-4 lg:w-fit">
-            <div class="character-card  overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal"
-                onclick="showImage('img/full1.jpg')">
-                <img src="img/gallery/1.png" alt="Character 1" class="w-full">
+<body class="font-sans bg-gray-100">
+    <div class="min-h-screen bg-custom bg-cover bg-center bg-fixed flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="bg-white bg-opacity-70 px-6 py-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-8">Character Design Commission Pricelist</h2>
+            <a href="index.html" class="absolute top-0 left-0 m-4">
+                <svg class="w-6 h-6 text-blue-500 hover:text-blue-700 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+              </a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Pricing Card Component -->
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Full Body Full Color No Effect</h3>
+                    <p class="text-gray-700 mb-4">$280</p>
+                </div>
+                <!-- Repeat for other pricing options -->
+                <!-- For brevity, only showing one example -->
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Full Body Inking</h3>
+                    <p class="text-gray-700 mb-4">$200</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Full Body Full Color with Effect Skill Weapon</h3>
+                    <p class="text-gray-700 mb-4">$300</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Full Body Inking with Effect Skill Weapon</h3>
+                    <p class="text-gray-700 mb-4">$230</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Illustration 1 Figure Full Color + Background</h3>
+                    <p class="text-gray-700 mb-4">$400 + Other Character $250</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Illustration 1 Figure Inking + Background</h3>
+                    <p class="text-gray-700 mb-4">$320 + Other Character $200</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Splash Art 1 Figure Full Color + Background</h3>
+                    <p class="text-gray-700 mb-4">$350 + Other Character $250</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Half Body Full Color</h3>
+                    <p class="text-gray-700 mb-4">$250 + Effect Skill Magic and Weapon $100</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Half Body Inking</h3>
+                    <p class="text-gray-700 mb-4">$200 + Effect Skill Magic and Weapon $80</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Headshot</h3>
+                    <p class="text-gray-700 mb-4">$170</p>
+                </div>
+                <div class="bg-gray-200 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold mb-4">Headshot Inking</h3>
+                    <p class="text-gray-700 mb-4">$120</p>
+                </div>
             </div>
-            <div class="character-card  overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal "
-                onclick="showImage('img/full2.jpg')">
-                <img src="img/gallery/2.jpg" alt="Character 2" class="w-full">
-            </div>
-            <div class="character-card  overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal "
-                onclick="showImage('img/full3.jpg')">
-                <img src="img/gallery/3.png" alt="Character 3" class="w-full">
-            </div>
-            <div class="character-card  overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal "
-                onclick="showImage('img/full4.jpg')">
-                <img src="img/gallery/4.png" alt="Character 4" class="w-full">
-            </div>
-            <div class="character-card  overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal "
-                onclick="showImage('img/full5.jpg')">
-                <img src="img/gallery/5.jpg" alt="Character 5" class="w-full">
-            </div>
-            <div class="character-card  overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal "
-                onclick="showImage('img/full6.jpg')">
-                <img src="img/gallery/6.png" alt="Character 6" class="w-full">
-            </div>
-            <div class="character-card  overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal "
-                onclick="showImage('img/full7.jpg')">
-                <img src="img/gallery/7.png" alt="Character 7" class="w-full">
-            </div>
-            <div class="character-card relative overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal"
-                onclick="showImage('img/full8.jpg')">
-                <img src="img/gallery/8.png" alt="Character 8" class="w-full">
-            </div>
-            <div class="invisible character-card relative overflow-hidden rounded-lg bg-white shadow-lg flex-col items-center center-horizontal"
-                onclick="showImage('img/full8.jpg')">
-                <img src="img/gallery/8.png" alt="Character 8" class="w-full">
-            </div>
-            <div class="character-card relative overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal"
-                onclick="window.location.href='https://www.artstation.com/gstudio1';">
-                 <img src="img/logo/icons8-question-50.png" alt="Character 8" class="w-full">
-            </div>
-            <div class="character-card relative overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal"
-                    onclick="window.location.href='https://www.deviantart.com/gstudioworks';">
-                    <img src="img/logo/icons8-question-50.png" alt="Character 8" class="w-full">
-            </div>
-            <div class="invisible character-card relative overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal"
-                onclick="showImage('img/full8.jpg')">
-                <img src="img/gallery/" alt="Character 8" class="w-full">
-            </div>
-            <div class="invisible character-card relative overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal"
-                onclick="showImage('img/full8.jpg')">
-                <img src="img/gallery/" alt="Character 8" class="w-full">
-            </div>
-            <div class="invisible character-card relative overflow-hidden rounded-lg bg-white shadow-lg flex flex-col items-center center-horizontal"
-                onclick="showImage('img/full8.jpg')">
-                <img src="img/gallery/" alt="Character 8" class="w-full">
-            </div>
-
-            <!-- Add more character cards here -->
-        </div>
-        <div id="imageContainer" class="mt-4">
-            <!-- Image will appear here -->
         </div>
     </div>
 
     <script>
-        function showImage(src) {
-            var image = new Image();
-            image.src = src;
-            image.onload = function() {
-                var imageContainer = document.getElementById('imageContainer');
-                var aspectRatio = image.width / image.height;
-                var targetWidth = Math.min(image.width / 2, window.innerWidth * 0.5);
-                var targetHeight = targetWidth / aspectRatio;
-                imageContainer.innerHTML = `
-                    <img src="${src}" alt="Selected Character" class="mx-auto mt-4 rounded-lg shadow-lg opacity-0 clicked-image transition-opacity duration-2000 ease-in-out" style="max-width: ${targetWidth}px; max-height: ${targetHeight}px;">
-                `;
-                setTimeout(function() {
-                    var img = imageContainer.querySelector('img');
-                    img.classList.remove('opacity-0');
-                }, 500); // Delay for smooth fade-in
-            };
-        }
+        // JavaScript logic can be added here if needed
     </script>
 </body>
 
